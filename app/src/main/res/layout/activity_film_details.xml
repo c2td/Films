@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_film_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.pm.films.FilmDetailsActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            app:cardElevation="5dp"
+            card_view:cardCornerRadius="@dimen/card_radius">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:padding="8dp"
+                android:rowCount="3">
+
+                <TextView
+                    android:id="@+id/details_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/film_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/details_title"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/separator" />
+
+                <ImageView
+                    android:id="@+id/details_poster"
+                    android:layout_width="154dp"
+                    android:layout_height="231dp"
+                    android:layout_below="@id/details_title"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="centerCrop" />
+
+                <Button
+                    android:id="@+id/play_trailer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/details_title"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/details_poster"
+                    android:layout_toEndOf="@id/details_poster"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/film_title_padding"
+                    android:text="@string/play_trailer"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/details_cast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/play_trailer"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/details_poster"
+                    android:layout_toEndOf="@id/details_poster"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/card_margin"
+            app:cardElevation="@dimen/card_elevation"
+            card_view:cardCornerRadius="@dimen/card_radius">
+
+            <TextView
+                android:id="@+id/details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp" />
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

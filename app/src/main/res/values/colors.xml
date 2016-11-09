@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- amber color palette from Material Design -->
+    <color name="colorPrimary">#FFC107</color> <!-- 500 -->
+    <color name="colorPrimaryDark">#FFA000</color> <!-- 700 -->
+    <color name="colorPrimaryLight">#FFECB3</color> <!-- 100 -->
+
+    <color name="colorAccent">#FF3D00</color>
+    <!--<color name="viewBg">#f1f5f8</color>-->
+    <color name="viewBg">#FFE082</color>
+    <color name="film_title">#4c4c4c</color>
+    <color name="separator">#d3d3d3</color>
+</resources>
