@@ -3,6 +3,8 @@ package com.example.pm.films;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+
 /** This class represents one film object
  *  Every film object has an id, title, description, urls to retrieve poster
  *  and video trailer and cast listing of max. 3 names
@@ -15,7 +17,7 @@ class Film implements Parcelable {
     private String mDescription;
     private String mPosterUrl;
     private String mVideoUrl;
-    private String[] mCast;
+    private ArrayList<String> mCast;
 
     Film(long id, String title, String posterUrl, String description) {
         this.mId = id;
@@ -60,19 +62,11 @@ class Film implements Parcelable {
         return mDescription;
     }
 
-    String getVideoUrl() {
-        return mVideoUrl;
-    }
-
-    public String[] getCast() {
-        return mCast;
-    }
-
     void setVideoUrl(String videoUrl) {
         mVideoUrl = videoUrl;
     }
 
-    void setCast(String[] cast) {
+    void setCast(ArrayList<String> cast) {
         mCast = cast;
     }
 
